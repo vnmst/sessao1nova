@@ -82,19 +82,20 @@ function preload() {
 
 function setup() {
    canvas = createCanvas(windowWidth / 1.25, windowHeight / 1.75);
+  centralizarCanvas();
   // canvas pequeno do lado REAL
-smallCanvasReal = createGraphics(width / 4, height / 4);
+smallCanvasReal = createGraphics(width / 6, height / 6);
 
 // canvas pequeno do lado VIRTUAL (NOVO!)
-smallCanvasVirtual = createGraphics(width / 4, height / 4);
+smallCanvasVirtual = createGraphics(width / 6, height / 6);
 
 // canvas de glitch do lado REAL (NOVO!)
-smallGlitchCanvasReal = createGraphics(width / 4, height / 4);
+smallGlitchCanvasReal = createGraphics(width / 6, height / 6);
 
 // canvas de glitch do lado VIRTUAL (NOVO!)
-smallGlitchCanvasVirtual = createGraphics(width / 4, height / 4);
+smallGlitchCanvasVirtual = createGraphics(width / 6, height / 6);
 
-  smallTransitionCanvas = createGraphics(width / 2, height / 2);
+  smallTransitionCanvas = createGraphics(width / 6, height / 6);
   overlayTransicao = createGraphics(width, height);
   
   distVirtual = new p5.Distortion(distorçao);
@@ -689,4 +690,12 @@ function centerButton2() {
     // Obtém a posição do canvas na tela (necessário para posicionar elementos HTML)
     let canvasX = (windowWidth - width) / 2;
     let canvasY = (windowHeight - height) / 2;
+}
+
+function centralizarCanvas() {
+  // Define CSS absoluto
+  canvas.style('position', 'absolute');
+  canvas.style('left', '50%');
+  canvas.style('top', '50%');
+  canvas.style('transform', 'translate(-50%, -50%)'); // desloca metade do width e height
 }
