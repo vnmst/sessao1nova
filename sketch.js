@@ -81,7 +81,7 @@ function preload() {
 }
 
 function setup() {
-   canvas = createCanvas(windowWidth / 1, windowHeight / 1.5);
+   canvas = createCanvas(windowWidth / 1.25, windowHeight / 1.75);
   // canvas pequeno do lado REAL
 smallCanvasReal = createGraphics(width / 4, height / 4);
 
