@@ -84,9 +84,9 @@ function setup() {
    canvas = createCanvas(windowWidth / 1.33, windowHeight / 1.83);
    centerCanvas();
 
-    canvas.elt.addEventListener("touchmove", (e) => {
-    e.preventDefault(); // necessário no iPhone para evitar scroll
-  }, { passive: false });
+   // canvas.elt.addEventListener("touchmove", (e) => {
+   // e.preventDefault(); // necessário no iPhone para evitar scroll
+//  }, { passive: false });
   
   // canvas pequeno do lado REAL
 smallCanvasReal = createGraphics(width / 8, height / 8);
