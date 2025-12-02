@@ -83,10 +83,6 @@ function preload() {
 function setup() {
    canvas = createCanvas(windowWidth / 1.33, windowHeight / 1.83);
    centerCanvas();
-
-   // canvas.elt.addEventListener("touchmove", (e) => {
-   // e.preventDefault(); // necessário no iPhone para evitar scroll
-//  }, { passive: false });
   
   // canvas pequeno do lado REAL
 smallCanvasReal = createGraphics(width / 8, height / 8);
@@ -166,7 +162,7 @@ smallGlitchCanvasVirtual = createGraphics(width / 8, height / 8);
   if (!window.myGlitch) {
     window.myGlitch = new Glitch();
   }
-  myGlitch = window.myGlitch;
+  //myGlitch = window.myGlitch;
   
     // A cada 3 segundos, sorteia novo valor aleatório
   setInterval(() => {
