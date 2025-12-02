@@ -143,18 +143,7 @@ smallGlitchCanvasVirtual = createGraphics(width / 8, height / 8);
     meuBotao3.position(width / 2 - meuBotao3.width / 2, height / 2 - 130);
     
     // Chama a função de posicionamento para garantir o centro
-    centerButton2();
-  
-  setTimeout(() => {
-  cont3 += 1;
-}, 5000);
-  
-    setTimeout(() => {
-  setInterval (() => {
-    min(veloVirtual += 0.009, 5);
-  }, 1000)
-}, 60000);
-  
+    centerButton2();  
   
   // Coloca todos os vídeos em arrays para facilitar o sorteio
   videoRealGroup = [Real1, Real2, Real3, Real4, Real5, Real6, Real7, Real8, Real9, Real10, Real11];
@@ -459,6 +448,15 @@ function drawSessao2() {
 function mousePressed() {
   if (mostrarLetreiro) {
     mostrarLetreiro = false;
+      setTimeout(() => {
+  cont3 += 1;
+}, 180000);
+  
+    setTimeout(() => {
+  setInterval (() => {
+    min(veloVirtual += 0.009, 5);
+  }, 1000)
+}, 60000);
     return; // o primeiro clique é só para iniciar
   }
   
