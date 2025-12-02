@@ -4,6 +4,7 @@ let mostrarLetreiro = true;
 let brilhoLetreiro = 0;
 let aumentandoBrilho = true;
 let videoReal; let videoVirtual;
+let canvas;
 let smallCanvasReal;
 let smallCanvasVirtual;
 let smallGlitchCanvasReal;
