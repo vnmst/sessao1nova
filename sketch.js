@@ -43,7 +43,6 @@ let params = {
   randomBytesCount: 500
 };
 
-
 function preload() {
   
   Real1 = createVideo ('real1.mp4');
