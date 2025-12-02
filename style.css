@@ -1,7 +1,14 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;         /* alguns celulares ignoram isso */
+  min-height: 100vh;    /* isso força ocupar a tela inteira */
+   overflow: hidden;        /* impede scroll da página inteira */
+  touch-action: none;      /* bloqueia gestures no mobile */
+   background-color: black !important;
 }
 canvas {
-  display: block;
+  background: transparent;  /* garante que o canvas seja translúcido nas bordas */
+display: block;
 }
