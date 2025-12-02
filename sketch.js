@@ -182,6 +182,11 @@ smallGlitchCanvasVirtual = createGraphics(width / 8, height / 8);
     params.randomBytesCount = int(random(0, 500)); // sorteia de 0 a 500
     console.log("Novo valor:", params.randomBytesCount);
   }, 3000);
+
+  setTimeout(() => {
+  document.documentElement.style.backgroundColor = "black";
+  document.body.style.backgroundColor = "black";
+}, 50);
 }
 function desenharLetreiro() {
   background(0);
