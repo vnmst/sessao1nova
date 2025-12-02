@@ -162,7 +162,7 @@ smallGlitchCanvasVirtual = createGraphics(width / 8, height / 8);
   if (!window.myGlitch) {
     window.myGlitch = new Glitch();
   }
-  //myGlitch = window.myGlitch;
+  myGlitch = window.myGlitch;
   
     // A cada 3 segundos, sorteia novo valor aleatório
   setInterval(() => {
