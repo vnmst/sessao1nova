@@ -123,8 +123,6 @@ smallGlitchCanvasVirtual = createGraphics(width / 8, height / 8);
     // Posiciona o botão corretamente (Será refeito em windowResized)
     meuBotao2.position(width / 2 - meuBotao2.width / 2, height / 2 + 50);
     
-    // Chama a função de posicionamento para garantir o centro
-    centerButton2();
   
     // 🟢 CRIAÇÃO E ESTILIZAÇÃO DO BOTÃO DA SESSÃO 2
     meuBotao3 = createButton("VOCÊ FOI PREMIADO"); // Alterado o texto
