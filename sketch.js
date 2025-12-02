@@ -96,7 +96,7 @@ smallGlitchCanvasReal = createGraphics(width / 8, height / 8);
 // canvas de glitch do lado VIRTUAL (NOVO!)
 smallGlitchCanvasVirtual = createGraphics(width / 8, height / 8);
 
-  smallTransitionCanvas = createGraphics(width / 8, height / 8);
+  smallTransitionCanvas = createGraphics(width / 2, height / 2);
   overlayTransicao = createGraphics(width, height);
   
   distVirtual = new p5.Distortion(distorçao);
@@ -149,7 +149,7 @@ smallGlitchCanvasVirtual = createGraphics(width / 8, height / 8);
   
   setTimeout(() => {
   cont3 += 1;
-}, 180000);
+}, 5000);
   
     setTimeout(() => {
   setInterval (() => {
@@ -693,9 +693,24 @@ function chamaLink() {window.location.href = "https://vnmst.github.io/sessao2/" 
 
 // 🟢 NOVO: Função para posicionar o botão corretamente
 function centerButton2() {
-    // Obtém a posição do canvas na tela (necessário para posicionar elementos HTML)
-    let canvasX = (windowWidth - width) / 2;
-    let canvasY = (windowHeight - height) / 2;
+  if (!meuBotao2 || !meuBotao3 || !canvas) return; // garante que tudo existe
+
+  // posição do canvas na tela
+  let canvasX = canvas.position().x;
+  let canvasY = canvas.position().y;
+
+  // botão 2 no centro + offset vertical
+  meuBotao2.position(
+    canvasX + width / 2 - meuBotao2.width / 2,
+    canvasY + height / 2 + 50
+  );
+
+  // botão 3 no centro + offset vertical diferente
+  meuBotao3.position(
+    canvasX + width / 2 - meuBotao3.width / 2,
+    canvasY + height / 2 - 130
+  );
+}
 }
 
 function centerCanvas() {
