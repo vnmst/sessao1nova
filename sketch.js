@@ -711,7 +711,6 @@ function centerButton2() {
     canvasY + height / 2 - 130
   );
 }
-}
 
 function centerCanvas() {
   let x = (windowWidth - width) / 2;
